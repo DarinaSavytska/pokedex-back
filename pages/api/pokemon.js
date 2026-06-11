@@ -1,7 +1,8 @@
 const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:3001",
-  "https://pokedex-front.vercel.app"
+//   "https://pokedex-front.vercel.app",
+  "https://darinasavytska.github.io"
 ];
 
 export default async function handler(req, res) {
