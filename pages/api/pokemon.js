@@ -4,8 +4,8 @@ export default async function handler(req, res) {
     res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
     try {
-        const response = await fetch("https://pokeapi.co/api/v2/pokemon?offset=0&limit=1");
-        const respons = await fetch("https://pokeapi.co/api/v2/pokemon?offset=1&limit=1");
+        const response = await fetch("https://pokeapi.co/api/v2/pokemon?offset=0&limit=2");
+        const respons = await fetch("https://pokeapi.co/api/v2/pokemon?offset=2&limit=3");
 
         const data = await response.json();
         const dat = await respons.json();
