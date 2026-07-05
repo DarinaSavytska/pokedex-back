@@ -1,18 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-const allowedOrigins = [
-  // "http://localhost:3000",
-  // "http://localhost:3001",
-  "https://darinasavytska.github.io",
-];
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const origin = req.headers.origin as string;
-
-  if (allowedOrigins.includes(origin)) {
-    res.setHeader("Access-Control-Allow-Origin", origin);
-  }
-
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
