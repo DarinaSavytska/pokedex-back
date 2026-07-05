@@ -26,6 +26,7 @@ export default async function handler(req = 0, res) {
 
     const fullData = data.results.map((pokemon, idx) => {
       const pokeId = `${idx + 1 + limit * req.query.page}`;
+
       const pokeNum = (pokeId) => {
         if ((pokeId) < 10) {
           return `00${pokeId}`;
